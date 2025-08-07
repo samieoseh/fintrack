@@ -6,13 +6,14 @@ import Chip from "@/components/chip";
 import DashboardTable from "./components/dashboard-table";
 import SummaryCard from "./components/summary-card";
 import Link from "next/link";
+import React from "react";
 
 interface DashboardPageProps {
-  searchParams: { tab?: string };
+  searchParams: Promise<{ tab?: string }>;
 }
 
 export default function DashboardPage({ searchParams }: DashboardPageProps) {
-  const tab = searchParams.tab ?? "overview";
+  const { tab } = React.use(searchParams);
 
   return (
     <div className="px-4 sm:px-6 md:px-8 lg:px-10 py-4 space-y-6">
