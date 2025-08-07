@@ -13,7 +13,7 @@ interface DashboardPageProps {
 }
 
 export default function DashboardPage({ searchParams }: DashboardPageProps) {
-  const { tab } = React.use(searchParams);
+  const { tab } = React.use(searchParams) ?? "overview";
 
   return (
     <div className="px-4 sm:px-6 md:px-8 lg:px-10 py-4 space-y-6">
