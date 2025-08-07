@@ -82,7 +82,9 @@ export default function DashboardTable() {
             d="M9 17v1a3 3 0 006 0v-1m-9-4h12M6 13V6a2 2 0 012-2h8a2 2 0 012 2v7"
           />
         </svg>
-        <h2 className="text-lg font-semibold">No Transactions Found</h2>
+        <h2 className="lg:text-lg sm:text-md font-semibold">
+          No Transactions Found
+        </h2>
         <p className="text-sm mt-1">
           You don’t have any transactions yet. Once you do, they’ll show up
           here.

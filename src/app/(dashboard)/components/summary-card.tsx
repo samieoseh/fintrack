@@ -48,7 +48,9 @@ export default function SummaryCard() {
             d="M13 16h-1v-4h-1m1 4v1m8-5a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        <h2 className="text-lg font-semibold">No summary data available</h2>
+        <h2 className="lg:text-lg text-md font-semibold">
+          No summary data available
+        </h2>
         <p className="text-sm mt-1">
           We could not load your dashboard summary yet.
         </p>
@@ -58,7 +60,7 @@ export default function SummaryCard() {
 
   return (
     <div className="space-y-4">
-      <h2 className="py-2 text-[1.25rem] font-bold">Summary</h2>
+      <h2 className="py-2 lg:text-[1.25rem] font-bold text-[.9rem]">Summary</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4">
         <Card
           label="Total Balance"

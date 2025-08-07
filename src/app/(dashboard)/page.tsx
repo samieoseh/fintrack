@@ -59,7 +59,7 @@ export default function DashboardPage({ searchParams }: DashboardPageProps) {
           <Link
             href="?tab=overview"
             className={`px-4 py-3 whitespace-nowrap border-b-2 ${
-              tab === "overview"
+              tab === "overview" || tab === "" || tab === undefined
                 ? "border-[#4B8B9F] text-[#4B8B9F]"
                 : "border-transparent text-[#49656E] hover:text-[#4B8B9F]"
             } font-medium text-sm sm:text-base`}
