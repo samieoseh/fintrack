@@ -15,7 +15,7 @@ export default function Error({ error, reset }: ErrroProps) {
     if (IS_DEV) {
       console.error("Error boundary caught: ", error);
     }
-  }, [error]);
+  }, [error, IS_DEV]);
   return (
     <div className="p-4 bg-red-100 text-red-800 rounded">
       <h2>Something went wrong</h2>

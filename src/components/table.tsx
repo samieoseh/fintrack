@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 type TableProps<T extends object> = {
-  columns: ColumnDef<T, any>[];
+  columns: ColumnDef<T, unknown>[];
   data: T[];
   enableSorting?: boolean;
   enableFiltering?: boolean;
