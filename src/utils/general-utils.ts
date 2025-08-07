@@ -1,5 +1,5 @@
 /**
- * Format a number as currency with thousands separators.
+ * Format a number as currency with thousands separators and also handles negative values.
  *
  * @param amount - The numeric amount to format.
  * @param currencyLabel - Optional currency symbol (default is "$").
@@ -8,10 +8,15 @@
 export const formatCurrency = (amount: number, currencyLabel = "$"): string => {
   if (isNaN(amount)) return `${currencyLabel}0`;
 
-  return `${currencyLabel}${amount.toLocaleString(undefined, {
+  const isNegative = amount < 0;
+  const absoluteAmount = Math.abs(amount);
+
+  const formatted = absoluteAmount.toLocaleString(undefined, {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
-  })}`;
+  });
+
+  return `${isNegative ? "-" : ""}${currencyLabel}${formatted}`;
 };
 
 /**

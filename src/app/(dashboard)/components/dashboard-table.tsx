@@ -6,6 +6,7 @@ import Table from "@/components/table";
 import Chip from "@/components/chip";
 import { TRANSACTIONS } from "../lib/constants";
 import LoadingSpinner from "@/components/loading-spinner";
+import { formatCurrency } from "@/utils/general-utils";
 
 const columnHelper = createColumnHelper<Transaction>();
 
@@ -24,7 +25,7 @@ const columns = [
   }),
   columnHelper.accessor("amount", {
     header: "Amount",
-    cell: (info) => info.getValue(),
+    cell: (info) => formatCurrency(info.getValue()),
     footer: (info) => info.column.id,
   }),
   columnHelper.accessor("currency", {
