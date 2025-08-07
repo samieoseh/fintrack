@@ -80,7 +80,7 @@ export default function DashboardPage({ searchParams }: DashboardPageProps) {
       </div>
 
       <div className="flex flex-col gap-4">
-        {tab === "overview" && (
+        {(tab === "" || tab === undefined || tab === "overview") && (
           <>
             <SummaryCard />
             <DashboardTable />
