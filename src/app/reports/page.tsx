@@ -4,7 +4,7 @@ export default function ReportsPage() {
       <div className="max-w-md">
         <h1 className="text-3xl font-semibold text-gray-800 mb-4">Reports</h1>
         <p className="text-lg text-gray-600 mb-6">
-          We're working on this feature. It'll be available soon!
+          We are working on this feature. It will be available soon!
         </p>
         <div className="flex items-center justify-center">
           <span className="animate-pulse inline-block w-3 h-3 rounded-full bg-[#3A6C7B] mr-2" />

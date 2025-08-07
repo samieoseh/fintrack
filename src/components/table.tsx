@@ -6,8 +6,6 @@ import {
   flexRender,
   getSortedRowModel,
   SortingState,
-  getFilteredRowModel,
-  ColumnFiltersState,
   getPaginationRowModel,
 } from "@tanstack/react-table";
 import React, { useMemo, useState } from "react";
@@ -15,9 +13,6 @@ import {
   ChevronUp,
   ChevronDown,
   ChevronsUpDown,
-  Search,
-  Filter,
-  X,
   ChevronLeft,
   ChevronRight,
   ChevronsLeft,
