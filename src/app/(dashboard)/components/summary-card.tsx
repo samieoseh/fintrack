@@ -50,7 +50,7 @@ export default function SummaryCard() {
         </svg>
         <h2 className="text-lg font-semibold">No summary data available</h2>
         <p className="text-sm mt-1">
-          We couldn't load your dashboard summary yet.
+          We could not load your dashboard summary yet.
         </p>
       </div>
     );
