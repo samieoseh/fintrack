@@ -1,3 +1,5 @@
+import { FilterFn } from "@tanstack/react-table";
+
 /**
  * Format a number as currency with thousands separators and also handles negative values.
  *
@@ -30,4 +32,19 @@ export const formatGrowth = (change: number): string => {
 
   const sign = change > 0 ? "+" : change < 0 ? "−" : "";
   return `${sign}${Math.abs(change).toFixed(0)}%`;
+};
+
+export const rangeNumberFilter: FilterFn<any> = (
+  row,
+  columnId,
+  filterValue
+) => {
+  const rowValue = row.getValue<number>(columnId);
+  const [min, max] = filterValue as [number, number];
+
+  if (typeof rowValue !== "number") return false;
+  if (min !== undefined && rowValue < min) return false;
+  if (max !== undefined && rowValue > max) return false;
+
+  return true;
 };

@@ -27,6 +27,9 @@ const columns = [
     header: "Amount",
     cell: (info) => formatCurrency(info.getValue()),
     footer: (info) => info.column.id,
+    meta: {
+      filterVariant: "range",
+    },
   }),
   columnHelper.accessor("currency", {
     header: "Currency",
